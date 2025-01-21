@@ -1,18 +1,28 @@
 import React from "react";
 import mainImg from "../assets/main-header.svg";
 import Image from "next/image";
+import Menubar from "@/components/Menu/Menubar";
+import About from "@/components/About";
 
 function Page() {
   return (
-    <div className="d-flex justify-content-center align-items-center text-center">
-      <Image
-        src={mainImg}
-        alt="Main Header"
-        className="img-fluid"
-        style={{display:"block", marginLeft: '36vw', marginTop: '1vw' }}
-      />
-      <h1 className="fw-semibold fs-1">HELLO</h1>
-    </div>
+    <>
+      <div className="container">
+      <Menubar/>
+        <div className="row">
+          <div className="col-12 d-flex flex-column justify-content-center align-items-center">
+            <Image
+              src={mainImg}
+              alt="Main Header"
+              className="img-fluid"
+              style={{ marginLeft:'7vh' ,height: '45vh', width: '45vh' }}
+            />
+            <h1 className="fw-semibold fs-1"></h1>
+            <About/>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
